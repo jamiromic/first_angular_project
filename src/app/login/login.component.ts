@@ -14,6 +14,9 @@ export class LoginComponent {
   autenticato: boolean = true;
   consentito: boolean = false;
   errorMsg: string = "L'userId e/o la password sono errati"
+
+  titolo: string = "Accesso & Autenticazione"
+  sottotitolo: string = "Procedi ad inserire la userid e la password"
   
   constructor(private route: Router) {
 
