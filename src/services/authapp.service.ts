@@ -11,9 +11,16 @@ export class AuthappService {
     var retVal = (userid === 'jamiromic' && password === 'jimenez0486') ? true : false;
 
     if(retVal) {
-      sessionStorage.setItem('userid', userid);
+      sessionStorage.setItem('Utente', userid);
     }
     return retVal;
   }
-  
+
+  loggedUser = (): string | null => (sessionStorage.getItem("Utente")) ? sessionStorage.getItem("Utente") : "";
+
+  isLogged = (): boolean => (sessionStorage.getItem('Utente')) ? true : false;
+
+  clearUser = (): void => sessionStorage.removeItem("Utente");
+
+  clearAll = (): void => sessionStorage.clear();
 }
