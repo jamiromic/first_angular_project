@@ -16,4 +16,14 @@ export class ArticoliService {
   ]
 
   constructor() { }
+
+  getArticoli = () : IArticoli[] => this.articoli;
+
+  getArticoliByCode = (codart: string) : IArticoli => {
+
+    const index = this.articoli.findIndex(articoli => articoli.codart === codart);
+
+    return this.articoli[index];
+    
+  }
 }
